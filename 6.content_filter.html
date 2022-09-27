@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+  <title>Document</title>
+</head>
+<div class="names">Jason Kidd</div>
+<div class="names">LeBron James</div>
+<div class="names">Jason Williams</div>
+<div class="names">James Harden</div>
+
+<table class="table empty table-bordered">
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td></td>
+      <td>3</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<div>abc</div>
+<div><p>def</p></div>
+
+<div hidden>abc</div>
+<div><p>def</p></div>
+
+
+<body>
+  <script src="./js/jquery-3.6.1.min.js"></script>
+
+  <script>
+    // $("div.names:contains('LeBron')").css('background', 'yellow') //選取內容有LeBron東西
+
+    // $('.empty td:empty').css('background','yellow')//選取是空內容
+
+    // $('.empty td:not(:empty)').css('background','yellow')//選取不是空的內容
+
+    $('div:has(p)').css('background','yellow');//選取有p標籤
+
+    $('div:hidden').show();//把hidden  show出來
+
+
+  </script>
+</body>
+
+</html>

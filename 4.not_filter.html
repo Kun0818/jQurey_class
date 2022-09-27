@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="">
+    <input type="checkbox" name="alex">
+    <span>Alex</span>
+  </div>
+  <div class="">
+    <input type="checkbox" checked>
+    <span>Bill</span>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="./js/jquery-3.6.1.min.js"></script>
+
+  <script>
+    $('input:not(:checked)+span').css('background','grey')
+  </script>
+</body>
+</html>
