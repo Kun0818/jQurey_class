@@ -48,6 +48,12 @@
     // $('.item-003').parent().parent().parent().parent().next().css('color','blue');
 
     $('.item-002').siblings().css('color','blue')//選取除了自己以外的元素
+
+
+    $('li').click((e)=>{
+      e.stopPropagation();
+      console.log('lis',$(e.currentTarget).text())
+    })
   </script>
 </body>
 
