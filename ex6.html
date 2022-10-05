@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .wrap {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .train {
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    width: 500%;
+    transform: translateX(0px);
+    transition: 0.5s;
+  }
+
+  .train li img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .slider_dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider_dots li {
+    width: 40px;
+    height: 10px;
+    border: 1px solid skyblue;
+    margin: 0 4px;
+    border-radius: 5px;
+  }
+
+  .slider_dots li:nth-child(1) {
+    background-color: skyblue;
+  }
+</style>
+
+<body>
+  <div class="wrap">
+
+    <ul class="train">
+      <li><img src="./images/slide1.jpg" alt=""></li>
+      <li><img src="./images/slide2.jpg" alt=""></li>
+      <li><img src="./images/slide3.jpg" alt=""></li>
+      <li><img src="./images/slide4.jpg" alt=""></li>
+      <li><img src="./images/slide5.jpg" alt=""></li>
+    </ul>
+
+    <ul class="slider_dots">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script>
+      $('.slider_dots li').click(function () {
+        console.log($(this).index());
+
+        let a = $(this).index() * -800;
+        $('.train').css('transform', `translateX( ${a}px)`);
+
+        $(this).css(`background-color`, `skyblue`).siblings().css(`background-color`, `transparent`)
+
+
+
+        // $(`.slider_dots li`).css(`background-color`, `transparent`);
+
+
+        // let b = $(this).index() + 1;
+        // $(`.slider_dots li:nth-child(${b})`)c
+      })
+    </script>
+  </div>
+</body>
+
+</html>

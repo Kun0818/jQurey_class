@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      width: 100%;
+      height: 100vh;
+      cursor: url('./狗手手_04_奶茶.ico'),auto;
+    }
+    button{
+      cursor: url('./狗手手_04_奶茶.ico'),auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <button>click</button>
+      <!-- before -->
+      <ul>
+        <!-- prepend -->
+        <li>item1</li>
+        <li>item2</li>
+        <!-- append -->
+      </ul>
+      <!-- after -->
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script>
+    let x=
+    $('button').click((e)=>{
+      x+=1
+      $('ul').append(`<li> item:${x}</li>`)
+    })
+    $(window).mousedown(()=>{
+      $('body').css('cursor',"url('./狗手手_05_黑色.ico'),auto");
+    })
+    $(window).mouseup(()=>{
+      $('body').css('cursor',"url('./狗手手_04_奶茶.ico'),auto");
+    })
+
+  </script>
+</body>
+</html>

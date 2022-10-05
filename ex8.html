@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    height: 1000vh;
+  }
+
+  .wrap {
+    width: 100%;
+    height: 50px;
+    background-color: #ccc;
+    position: fixed;
+    top: 0;
+  }
+
+  .box {
+    height: 100%;
+    width: 10%;
+    background-color: skyblue;
+  }
+</style>
+
+<body>
+  <div class="wrap">
+    <div class="box">
+    </div>
+  </div>
+
+
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script>
+    $(window).scroll(function(){
+      const mom = $('body').height()
+      // console.log(mom);
+
+      const a = $(window).scrollTop();
+      const b = $(window).height();
+
+      const x = (a/(mom-b)) * 100;
+
+      console.log(x);
+
+      $('.box').css('width',`${x}+'%'`)
+
+    })
+  </script>
+</body>
+
+</html>
